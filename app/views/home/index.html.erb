@@ -1,21 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Brand</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <li class="nav-item nav-link active"><%= link_to "Home", root_path %><span class="sr-only">(current)</span></li>
-      <li class="nav-item nav-link"><%= link_to "My Blog", posts_path %></li>
+      <li class="nav-item nav-link"><%= link_to "Find", posts_path %></li>
       <li class="nav-item nav-link">Sign in</li>
     </div>
   </div>
 </nav>
 
 <div class="container">
-<h1>Amina's Rails CRUD app!</h1>
+<h1>Batch-it!</h1>
 </div>
 
 <div class="container">
-<%= link_to "My Blog", posts_path %>
+<%= link_to "Find cooks near you", posts_path %>
 </div>
