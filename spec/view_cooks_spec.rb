@@ -9,6 +9,7 @@ feature "view cooks" do
   scenario "user can visit new cook form from homepage" do
     visit root_path
     click_button "I am a cook"
+    
     visit new_post_path
     expect(page).to have_content "New Cook"
   end
