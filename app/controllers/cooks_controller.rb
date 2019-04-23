@@ -10,6 +10,7 @@ class CooksController < ApplicationController
 
   def new
     @cook = Cook.new
+    @cook = Cook.find(params[:id])
   end
 
   def edit
@@ -25,28 +26,6 @@ class CooksController < ApplicationController
         format.html { render :new }
       end
     end
-  end
-
-  def update
-    respond_to do |format|
-      if @cook.update(post_params)
-        format.html { redirect_to @cook, notice: 'Cook post was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
-    end
-  end
-
-  def destroy
-    @cook.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Cook post was successfully destroyed.' }
-    end
-  end
-
-  private
-  def set_cook
-    @cook = Cook.find(params[:id])
   end
 
   def cook_params
