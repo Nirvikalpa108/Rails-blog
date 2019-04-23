@@ -1,28 +1,20 @@
 class CooksController < ApplicationController
   before_action :set_cook, only: [:show, :edit, :update, :destroy]
 
-  # GET /cooks
-  # GET /cooks.json
   def index
     @cooks = Cook.all
   end
 
-  # GET /cooks/1
-  # GET /cooks/1.json
   def show
   end
 
-  # GET /cooks/new
   def new
     @cook = Cook.new
   end
 
-  # GET /cooks/1/edit
   def edit
   end
 
-  # COOK /cooks
-  # COOK /cooks.json
   def create
     @cook = Cook.new(cook_params)
 
@@ -37,8 +29,6 @@ class CooksController < ApplicationController
     end
   end
 
-  # PATCH/PUT /cooks/1
-  # PATCH/PUT /cooks/1.json
   def update
     respond_to do |format|
       if @cook.update(post_params)
@@ -50,9 +40,7 @@ class CooksController < ApplicationController
       end
     end
   end
-
-  # DELETE /cooks/1
-  # DELETE /cooks/1.json
+  
   def destroy
     @cook.destroy
     respond_to do |format|
