@@ -1,4 +1,4 @@
-require "rails helper"
+require "rails_helper"
 
 feature "cooks form validation" do
   scenario "completed successfully" do
