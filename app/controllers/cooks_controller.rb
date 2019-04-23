@@ -21,10 +21,8 @@ class CooksController < ApplicationController
     respond_to do |format|
       if @cook.save
         format.html { redirect_to @cook, notice: 'Cook post was successfully created.' }
-        format.json { render :show, status: :created, location: @cook }
       else
         format.html { render :new }
-        format.json { render json: @cook.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -33,19 +31,16 @@ class CooksController < ApplicationController
     respond_to do |format|
       if @cook.update(post_params)
         format.html { redirect_to @cook, notice: 'Cook post was successfully updated.' }
-        format.json { render :show, status: :ok, location: @cook }
       else
         format.html { render :edit }
-        format.json { render json: @cook.errors, status: :unprocessable_entity }
       end
     end
   end
-  
+
   def destroy
     @cook.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Cook post was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
