@@ -19,12 +19,10 @@ class CooksController < ApplicationController
   def create
     @cook = Cook.new(cook_params)
 
-    respond_to do |format|
-      if @cook.save
-        format.html { redirect_to @cook, notice: 'Cook post was successfully created.' }
-      else
-        format.html { render :new }
-      end
+    if @cook.save
+      redirect_to @cook, notice: "Cook post was successfully created."
+    else
+      render :new
     end
   end
 
