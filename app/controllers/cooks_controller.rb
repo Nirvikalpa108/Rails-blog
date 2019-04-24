@@ -13,9 +13,6 @@ class CooksController < ApplicationController
     @cook = Cook.new
   end
 
-  def edit
-  end
-
   def create
     @cook = Cook.new(cook_params)
 
