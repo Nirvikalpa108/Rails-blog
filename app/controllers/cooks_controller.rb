@@ -1,9 +1,4 @@
 class CooksController < ApplicationController
-  before_action :set_cook, only: [:show, :edit, :update, :destroy]
-
-  def index
-    @cooks = Cook.all
-  end
 
   def show
     @cook = Cook.find(params[:id])
