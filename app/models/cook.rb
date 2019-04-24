@@ -1,3 +1,3 @@
 class Cook < ApplicationRecord
-  validates :name, presence: true
+  validates :city, :cuisine, :name, presence: true
 end
