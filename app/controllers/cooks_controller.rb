@@ -29,6 +29,6 @@ class CooksController < ApplicationController
   end
 
   def cook_params
-    params.require(:cook).permit(:name, :cuisine, :city)
+    params.require(:cook).permit(:city, :cuisine, :name)
   end
 end
