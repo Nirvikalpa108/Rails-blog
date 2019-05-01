@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Cook:</strong>
@@ -14,3 +15,8 @@
   <strong>City:</strong>
   <%= @cook.city %>
 </p>
+</div>
+
+<div class="container">
+  <%= link_to 'Back', cooks_path %>
+</div>
