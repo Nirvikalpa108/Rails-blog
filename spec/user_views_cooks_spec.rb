@@ -2,7 +2,6 @@ require "rails_helper"
 
 feature "user views cooks" do
   scenario "successfully" do
-
     Cook.create!(name: "TEST_NAME", cuisine: "TEST_CUISINE", city: "TEST_CITY")
 
     visit cooks_path
