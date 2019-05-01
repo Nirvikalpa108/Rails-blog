@@ -4,8 +4,7 @@ class CooksController < ApplicationController
     @cooks = Cook.all
   end
 
-  end
-    def show
+  def show
     @cook = Cook.find(params[:id])
   end
 
@@ -26,3 +25,4 @@ class CooksController < ApplicationController
   def cook_params
     params.require(:cook).permit(:city, :cuisine, :name)
   end
+end
