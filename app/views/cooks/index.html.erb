@@ -23,6 +23,9 @@
       <td><%=cook.name%></td>
       <td><%=cook.cuisine%></td>
       <td><%=cook.city%></td>
+      <td><%= link_to 'Show', cook %></td>
+      <td><%= link_to 'Edit', edit_cook_path(cook) %></td>
+      <td><%= button_to 'Destroy', cook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <%end%>
 

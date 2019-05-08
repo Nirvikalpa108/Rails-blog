@@ -18,5 +18,7 @@
 </div>
 
 <div class="container">
+  <%= link_to 'Edit', edit_cook_path(@cook) %>
+  <%= button_to 'Destroy', @cook, method: :delete %>
   <%= link_to 'Back', cooks_path %>
 </div>
