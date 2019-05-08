@@ -3,9 +3,9 @@ require "rails_helper"
 feature "edit cook" do
   scenario "successfully" do
     cook = Cook.create!(
-        name: "TEST_NAME",
-        cuisine: "TEST_CUISINE",
-        city: "TEST_CITY",
+      name: "TEST_NAME",
+      cuisine: "TEST_CUISINE",
+      city: "TEST_CITY",
     )
 
     visit edit_cook_path(cook)

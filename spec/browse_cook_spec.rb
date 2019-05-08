@@ -17,9 +17,9 @@ feature "browse cook" do
 
   scenario "and edit successfully" do
     cook = Cook.create!(
-        name: "TEST_NAME",
-        cuisine: "TEST_CUISINE",
-        city: "TEST_CITY",
+      name: "TEST_NAME",
+      cuisine: "TEST_CUISINE",
+      city: "TEST_CITY",
     )
 
     visit cook_path(cook)
@@ -34,9 +34,9 @@ feature "browse cook" do
 
   scenario "and destroy" do
     cook = Cook.create!(
-        name: "TEST_NAME",
-        cuisine: "TEST_CUISINE",
-        city: "TEST_CITY",
+      name: "TEST_NAME",
+      cuisine: "TEST_CUISINE",
+      city: "TEST_CITY",
     )
 
     visit cook_path(cook)
@@ -48,9 +48,9 @@ feature "browse cook" do
 
   scenario "and go back" do
     cook = Cook.create!(
-        name: "TEST_NAME",
-        cuisine: "TEST_CUISINE",
-        city: "TEST_CITY",
+      name: "TEST_NAME",
+      cuisine: "TEST_CUISINE",
+      city: "TEST_CITY",
     )
 
     visit cook_path(cook)
