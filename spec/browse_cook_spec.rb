@@ -3,9 +3,9 @@ require "rails_helper"
 feature "browse cook" do
   scenario "successfully" do
     cook = Cook.create!(
-        name: "TEST_NAME",
-        cuisine: "TEST_CUISINE",
-        city: "TEST_CITY"
+      name: "TEST_NAME",
+      cuisine: "TEST_CUISINE",
+      city: "TEST_CITY",
     )
 
     visit cook_path(cook)
@@ -16,7 +16,11 @@ feature "browse cook" do
   end
 
   scenario "and edit successfully" do
-    cook = Cook.create!(name: "TEST_NAME", cuisine: "TEST_CUISINE", city: "TEST_CITY")
+    cook = Cook.create!(
+        name: "TEST_NAME",
+        cuisine: "TEST_CUISINE",
+        city: "TEST_CITY",
+    )
 
     visit cook_path(cook)
 
@@ -29,7 +33,11 @@ feature "browse cook" do
   end
 
   scenario "and destroy" do
-    cook = Cook.create!(name: "TEST_NAME", cuisine: "TEST_CUISINE", city: "TEST_CITY")
+    cook = Cook.create!(
+        name: "TEST_NAME",
+        cuisine: "TEST_CUISINE",
+        city: "TEST_CITY",
+    )
 
     visit cook_path(cook)
 
@@ -39,7 +47,11 @@ feature "browse cook" do
   end
 
   scenario "and go back" do
-    cook = Cook.create!(name: "TEST_NAME", cuisine: "TEST_CUISINE", city: "TEST_CITY")
+    cook = Cook.create!(
+        name: "TEST_NAME",
+        cuisine: "TEST_CUISINE",
+        city: "TEST_CITY",
+    )
 
     visit cook_path(cook)
     click_link "Back"
