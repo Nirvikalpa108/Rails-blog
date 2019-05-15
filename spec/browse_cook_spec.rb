@@ -55,6 +55,6 @@ feature "browse cook" do
 
     visit cook_path(cook)
     click_link "Back"
-    expect(page).to have_content "Find cooks near you"
+    expect(page).to have_text"Find cooks near you"
   end
 end
