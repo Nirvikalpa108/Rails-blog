@@ -31,6 +31,8 @@ class CooksController < ApplicationController
 
     if @cook.update(cook_params)
       redirect_to @cook, notice: "Cook was successfully edited."
+    else
+      render :edit
     end
   end
 
