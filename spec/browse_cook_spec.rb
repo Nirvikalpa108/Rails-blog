@@ -15,6 +15,21 @@ feature "browse cook" do
     expect(page).to have_content "TEST_CITY"
   end
 
+  scenario "by clicking on cook name" do
+    Cook.create!(
+        name: "TEST_NAME",
+        cuisine: "TEST_CUISINE",
+        city: "TEST_CITY",
+        )
+
+    visit cooks_path
+    click_link "TEST_NAME"
+
+    expect(page).to have_content "TEST_NAME"
+    expect(page).to have_content "TEST_CUISINE"
+    expect(page).to have_content "TEST_CITY"
+  end
+
   scenario "and go back" do
     cook = Cook.create!(
         name: "TEST_NAME",
