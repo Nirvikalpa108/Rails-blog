@@ -20,7 +20,7 @@
 
     <%@cooks.each do |cook| %>
     <tr>
-      <td><%=cook.name%></td>
+      <td><%= link_to cook.name, cook %></td>
       <td><%=cook.cuisine%></td>
       <td><%=cook.city%></td>
       <td><%= link_to 'Show', cook %></td>

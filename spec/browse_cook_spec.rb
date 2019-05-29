@@ -15,35 +15,19 @@ feature "browse cook" do
     expect(page).to have_content "TEST_CITY"
   end
 
-  scenario "and edit successfully" do
-    cook = Cook.create!(
+  scenario "by clicking on cook name" do
+    Cook.create!(
       name: "TEST_NAME",
       cuisine: "TEST_CUISINE",
       city: "TEST_CITY",
     )
 
-    visit cook_path(cook)
+    visit cooks_path
+    click_link "TEST_NAME"
 
-    click_link "Edit"
-
-    fill_in "Name", with: "TEST_DIFFERENT_NAME"
-    click_button "Update Cook"
-
-    expect(page).to have_content "TEST_DIFFERENT_NAME"
-  end
-
-  scenario "and destroy" do
-    cook = Cook.create!(
-      name: "TEST_NAME",
-      cuisine: "TEST_CUISINE",
-      city: "TEST_CITY",
-    )
-
-    visit cook_path(cook)
-
-    click_button "Destroy"
-
-    expect(page).not_to have_content "TEST_DIFFERENT_NAME"
+    expect(page).to have_content "TEST_NAME"
+    expect(page).to have_content "TEST_CUISINE"
+    expect(page).to have_content "TEST_CITY"
   end
 
   scenario "and go back" do
@@ -54,7 +38,8 @@ feature "browse cook" do
     )
 
     visit cook_path(cook)
+
     click_link "Back"
-    expect(page).to have_content "Find cooks near you"
+    expect(page).to have_text "Find cooks near you"
   end
 end
