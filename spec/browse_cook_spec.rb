@@ -17,10 +17,10 @@ feature "browse cook" do
 
   scenario "by clicking on cook name" do
     Cook.create!(
-        name: "TEST_NAME",
-        cuisine: "TEST_CUISINE",
-        city: "TEST_CITY",
-        )
+      name: "TEST_NAME",
+      cuisine: "TEST_CUISINE",
+      city: "TEST_CITY",
+    )
 
     visit cooks_path
     click_link "TEST_NAME"
@@ -32,16 +32,14 @@ feature "browse cook" do
 
   scenario "and go back" do
     cook = Cook.create!(
-        name: "TEST_NAME",
-        cuisine: "TEST_CUISINE",
-        city: "TEST_CITY",
-        )
+      name: "TEST_NAME",
+      cuisine: "TEST_CUISINE",
+      city: "TEST_CITY",
+    )
 
     visit cook_path(cook)
 
     click_link "Back"
-    expect(page).to have_text"Find cooks near you"
+    expect(page).to have_text "Find cooks near you"
   end
 end
-
-

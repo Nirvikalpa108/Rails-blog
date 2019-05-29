@@ -17,22 +17,22 @@ feature "edit cook" do
 
   scenario "and go back" do
     cook = Cook.create!(
-        name: "TEST_NAME",
-        cuisine: "TEST_CUISINE",
-        city: "TEST_CITY",
-        )
+      name: "TEST_NAME",
+      cuisine: "TEST_CUISINE",
+      city: "TEST_CITY",
+    )
 
     visit cook_path(cook)
     click_link "Back"
-    expect(page).to have_text"Find cooks near you"
+    expect(page).to have_text "Find cooks near you"
   end
 
   scenario "and update fails" do
     cook = Cook.create!(
-        name: "TEST_NAME",
-        cuisine: "TEST_CUISINE",
-        city: "TEST_CITY",
-        )
+      name: "TEST_NAME",
+      cuisine: "TEST_CUISINE",
+      city: "TEST_CITY",
+    )
 
     visit edit_cook_path(cook)
     fill_in "Name", with: ""
@@ -41,4 +41,3 @@ feature "edit cook" do
     expect(page).to have_content "Name can't be blank"
   end
 end
-
