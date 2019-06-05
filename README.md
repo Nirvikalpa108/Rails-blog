@@ -1,24 +1,28 @@
-# README
+# Rails CRUD app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic Rails CRUD (Create, Read, Update and Delete) application. I created this project to help me learn Rails.
 
-Things you may want to cover:
+## Setup 
 
-* Ruby version
+You will need:
+* [Ruby](https://www.ruby-lang.org/en/downloads/)
+* [Rubygems](https://rubygems.org/pages/download) (a package manager framework for Ruby) 
+* [Bundler](https://bundler.io/) (a Ruby gem management gem)
+* [Rails](https://rubyonrails.org/)
 
-* System dependencies
+## Installation 
+1. Fork this repo ([see here](https://help.github.com/en/articles/fork-a-repo) for instructions)
 
-* Configuration
+1. In your terminal or command prompt navigate to the directory where you have saved the repo
 
-* Database creation
+1. Install gems: ```bundle install```
 
-* Database initialization
+1. Run the rails server: ```rails s```
 
-* How to run the test suite
+1. Visit http://localhost:3000/ to run the application locally in your browser
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Run tests: ```rspec spec```
 
-* Deployment instructions
+## Help
 
-* ...
+If you run into any problems in the setup or installation of this programme, please raise an issue or if you're not familiar with GitHub, please feel free to reach out on [Twitter](https://twitter.com/a_adewusi). 
